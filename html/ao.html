@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../js/bootstrap.min.js"></script>
+    <script src="../js/chitiet.js"></script>
+    <style>
+        [class*=col-]{
+            margin: 0px auto;
+            padding: 0px;
+        }
+
+        .container {}
+
+        .nav-item {
+            margin-left: 30px;
+        }
+
+        .nav-link {
+          font-weight: bold;
+        }
+
+        .card {
+          margin-top: 50px;
+        }
+
+        .footer {
+          background-color: rgba(42,42,134,255);
+        }
+        .about a {
+          text-decoration: none;
+          color: white;
+        }
+        .hotro a {
+          text-decoration: none;
+          color: white;
+        }
+
+        #content {
+            background-color: antiquewhite;
+        }
+
+        .dropdown-toggle::after {
+          display: none;
+        }
+
+        .dropdown-toggle:hover {
+            background-color: rgb(238, 126, 34);
+        }
+
+        #icon_user:hover {
+            background-color: white;
+        }
+
+        .list_ao {
+            list-style-type: none;
+            font-weight: bold;
+            background-color: rgb(217, 0, 255);
+            height: 100%;
+        }
+
+        .list_ao > li {
+            padding-top: 20px;
+        }
+
+        .list_ao > li > a{
+            text-decoration: none;
+            color: white;    
+        }
+
+        .list_ao > li > a:hover {
+            color: blue;
+        }
+
+        #gia {
+          font-size: 20px;
+          font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="home.html">
+                    <img src="../img/logo.png" alt="#" style="width: 100%;">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Áo
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Áo polo</a></li>
+                          <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                          <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                          <li><a class="dropdown-item" href="#">Áo chống nắng</a></li>
+                          <li><a class="dropdown-item" href="#">Áo Khoác</a></li>
+                          <li><a class="dropdown-item" href="#">Áo giữ nhiệt</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Quần
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="quan.html">Quần short</a></li>
+                          <li><a class="dropdown-item" href="#">Quần kaki</a></li>
+                          <li><a class="dropdown-item" href="#">Quần jean</a></li>
+                          <li><a class="dropdown-item" href="#">Quần yody</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Túi xách
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="tuisach.html">Túi xách</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tất
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="tat.html">Tất cổ cao</a></li>
+                          <li><a class="dropdown-item" href="#">Tất không cổ</a></li>
+                          <li><a class="dropdown-item" href="#">Tất lưới</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mắt kính
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="matkinh.html">Kính thường</a></li>
+                          <li><a class="dropdown-item" href="#">Kính màu</a></li>
+                          <li><a class="dropdown-item" href="#">Kính cận</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Thêm
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="gioithieu.html" onclick="return about()">Giới thiệu</a></li>
+                          <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+                          <li><a class="dropdown-item" href="#">Tin tức</a></li>
+                          <li><a class="dropdown-item" href="#">Tin khuyến mãi</a></li>
+                          <li><a class="dropdown-item" href="#">Hàng outlet</a></li>
+                          <li><a class="dropdown-item" href="#">Hệ thống cửa hàng</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit" onclick="return search()">
+                        <img src="../img/search.png" alt="#" style="height: 30px; width: 30px;">
+                      </button>
+                    </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 pe-5">
+                      <li class="nav-item dropdown" id="icon_user">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../img/icon_user.jpg" alt="">
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="dangky.html">Đăng ký</a></li>
+                            <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item" id="icon_cart">
+                          <a class="nav-link dropdown-toggle" href="cart.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../img/icon_cart.png" alt="">
+                          </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+        <div class="row" id="content">
+            <div class="col-md-2 sm-1">
+                <ul class="list_ao text-start" style="padding: 10px 30px;">
+                    <li><a href="#" style="color: blue;">Áo polo</a></li>
+                    <li><a href="#">Áo thun</a></li>
+                    <li><a href="#">Áo sơ mi</a></li>
+                    <li><a href="#">Áo chống nắng</a></li>
+                    <li><a href="#">Áo khoác</a></li>
+                    <li><a href="#">Áo giữ nhiệt</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 sm-1">
+                <div class="row">
+                    <div class="col-md-3 sm-1">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              <span>Áo polo đen</span>
+                            </div>
+                            <div class="card-body">
+                              <img src="../img/poloden.png" alt="#" style="height: 100%; width: 100%;">
+                              <span id="gia">299.000VNĐ</span>
+                            </div>
+                            <div class="card-footer d-inline">
+                              <button class="bnt form-control bg-success" id="mua" value="den" onclick="getValue('den')">Mua</button>
+                              <button class="bnt form-control bg-warning" id="them">Thêm giỏ hàng</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-3 sm-1">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              <span>Áo polo trắng</span>
+                            </div>
+                            <div class="card-body">
+                              <img src="../img/polotrang.png" alt="#" style="height: 100%; width: 100%;">
+                              <span id="gia">299.000VNĐ</span>
+                            </div>
+                            <div class="card-footer d-inline">
+                              <button class="bnt form-control bg-success" id="mua" value="trang" onclick="getValue('trang')">Mua</button>
+                              <button class="bnt form-control bg-warning" id="them">Thêm giỏ hàng</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-3 sm-1">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              <span>Áo polo vàng</span>
+                            </div>
+                            <div class="card-body">
+                              <img src="../img/polovang.png" alt="#" style="height: 100%; width: 100%;">
+                              <span id="gia">299.000VNĐ</span>
+                            </div>
+                            <div class="card-footer d-inline">
+                              <button class="bnt form-control bg-success" id="mua" value="vang" onclick="getValue('vang')">Mua</button>
+                              <button class="bnt form-control bg-warning" id="them">Thêm giỏ hàng</button>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 sm-1">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              <span>Áo polo xám</span>
+                            </div>
+                            <div class="card-body">
+                              <img src="../img/poloxam.png" alt="#" style="height: 100%; width: 100%;">
+                              <span id="gia">299.000VNĐ</span>
+                            </div>
+                            <div class="card-footer d-inline">
+                              <button class="bnt form-control bg-success" id="mua" value="xam" onclick="getValue('xam')">Mua</button>
+                              <button class="bnt form-control bg-warning" id="them">Thêm giỏ hàng</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-3 sm-1">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              <span>Áo polo xanh</span>
+                            </div>
+                            <div class="card-body">
+                              <img src="../img/poloxanh.png" alt="#" style="height: 100%; width: 100%;">
+                              <span id="gia">299.000VNĐ</span>
+                            </div>
+                            <div class="card-footer d-inline">
+                              <button class="bnt form-control bg-success" id="mua" value="xanh" onclick="getValue('xanh')">Mua</button>
+                              <button class="bnt form-control bg-warning" id="them">Thêm giỏ hàng</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-3 sm-1">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              <span>Áo polo đỏ</span>
+                            </div>
+                            <div class="card-body">
+                              <img src="../img/polodo.png" alt="#" style="height: 100%; width: 100%;">
+                              <span id="gia">299.000VNĐ</span>
+                            </div>
+                            <div class="card-footer d-inline">
+                              <button class="bnt form-control bg-success" id="mua" value="do" onclick="getValue('do')">Mua</button>
+                              <button class="bnt form-control bg-warning" id="them">Thêm giỏ hàng</button>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer text-white px-2 py-2">
+            <div class="col-md-3 sm-1">
+              <p>“Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi suy nghĩ hành động của mình” là sứ mệnh, là triết lý, chiến lược.. luôn cùng YODY tiến bước</p>
+              <a href="https://www.facebook.com/baosupermegaultraultimatevippro" target="_blank"><img src="../img/iconfb2.png" alt="facebook"></a>
+              <a href="#"><img src="../img/iconzalo.png" alt="zalo" target="_blank"></a>
+              <a href="https://github.com/baodang96" target="_blank"><img src="../img/github.png" alt="github"></a>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-md-2 sm-1 about">
+              <div class="row"><h5>Về Yody</h5></div>
+              <div class="row"><a href="#">Giới thiệu</a></div>
+              <div class="row"><a href="#">Liên hệ</a></div>
+              <div class="row"><a href="#">Tuyển dụng</a></div>
+              <div class="row"><a href="#">Tin tức</a></div>
+              <div class="row"><a href="#">Hệ thống cửa hàng</a></div>
+              <div class="row"><a href="#">Hàng outlet</a></div>
+              <div class="row"><a href="#">Tin khuyến mãi</a></div>
+              <div class="row"><a href="#">Đăng ký đối tác</a></div>
+            </div>
+            <div class="col-md-3 sm-1 hotro">
+              <div class="row"><h5>Hỗ trợ khách hàng</h5></div>
+              <div class="row"><a href="#">Hướng dẫn Chọn size</a></div>
+              <div class="row"><a href="#">Chính sách Khách hàng thân thiết</a></div>
+              <div class="row"><a href="#">Chính sách Bảo hành, đổi/trả</a></div>
+              <div class="row"><a href="#">Chính sách Thanh toán, giao nhận</a></div>
+              <div class="row"><a href="#">Chính sách Đồng phục</a></div>
+              <div class="row"><a href="#">Chính sách Bảo mật thông tin khách hàng</a></div>
+              <div class="row"><a href="#">Chính sách Sử dụng Cookies</a></div>
+            </div>
+            <div class="col-md-3 sm-1 hotro">
+              <div class="row"><h5>CÔNG TY CP THỜI TRANG YODY</h5></div>
+              <div class="row"><span>Công ty cổ phần Thời trang YODY</span></div>
+              <div class="row"><span>Mã số thuế: 0801206940</span></div>
+              <div class="row"><span>Địa chỉ: Đường An Định - Phường Việt Hòa -</span></div>
+              <div class="row"><span>Thành phố Hải Dương - Hải Dương</span></div>
+              <div class="row"><a href="https://www.google.com/maps/search/yody">Tìm cửa hàng gần bạn nhất</a></div>
+              <div class="row"><span> Liên hệ đặt hàng: 024 999 86 999.</span></div>
+              <div class="row"><span>Thắc mắc đơn hàng: 024 999 86 999.</span></div>
+              <div class="row"><span>Góp ý khiếu nại: 1800 2086.</span></div>
+              <div class="row"><span> Email: chamsockhachhang@yody.vn</span></div>
+              <div class="row">
+                <div class="col-md-6 sm-1">
+                  <img src="../img/bocongthuong.png" alt="#">
+                </div>
+                <div class="col-md-6 sm-1" s>
+                  <img src="../img/dmca.png" alt="#" style="margin-top: 10px;">
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function search(){
+          alert("Đang cập nhật");
+        }
+
+        function getValue(value){
+            // Lấy giá trị của nút
+            var productId = value;
+            // Chuyển hướng đến trang khác và truyền id của nút qua tham số trên URL
+            window.location.href = "chitietsanpham.html?id=" + encodeURIComponent(productId);
+          }
+
+          document.addEventListener("DOMContentLoaded", function(){
+            // Sử dụng hàm kiemTraLocalStorage
+            var data1 = {
+              id : 'den',
+              name : 'Áo polo đen',
+              href : '../img/poloden.png',
+              gia : '299.000VNĐ',
+              size : 'M',
+              stock : '10',
+              info: 'Áo thun polo cao cấp.'
+            }
+            var data2 = {
+              id : 'trang',
+              name : 'Áo polo trắng',
+              href : '../img/polotrang.png',
+              gia : '299.000VNĐ',
+              size : 'M',
+              stock : '50',
+              info: 'Áo thun polo cao cấp.'
+            }
+            var data3 = {
+              id : 'vang',
+              name : 'Áo polo vàng',
+              href : '../img/polovang.png',
+              gia : '299.000VNĐ',
+              size : 'SM',
+              stock : '15',
+              info: 'Áo thun polo cao cấp.'
+            }
+            var data4 = {
+              id : 'xam',
+              name : 'Áo polo xám',
+              href : '../img/poloxam.png',
+              gia : '299.000VNĐ',
+              size : 'SS',
+              stock : '5',
+              info: 'Áo thun polo cao cấp.'
+            }
+            var data5 = {
+              id : 'xanh',
+              name : 'Áo polo xanh',
+              href : '../img/poloxanh.png',
+              gia : '299.000VNĐ',
+              size : 'SS',
+              stock : '5',
+              info: 'Áo thun polo cao cấp.'
+            }
+            var data6 = {
+              id : 'do',
+              name : 'Áo polo đỏ',
+              href : '../img/polodo.png',
+              gia : '299.000VNĐ',
+              size : 'SS',
+              stock : '5',
+              info: 'Áo thun polo cao cấp.'
+            }
+            localStorage.setItem(data1.id, JSON.stringify(data1));
+            localStorage.setItem(data2.id, JSON.stringify(data2));
+            localStorage.setItem(data3.id, JSON.stringify(data3));
+            localStorage.setItem(data4.id, JSON.stringify(data4));
+            localStorage.setItem(data5.id, JSON.stringify(data5));
+            localStorage.setItem(data6.id, JSON.stringify(data6));
+        })
+    </script>
+</body>
+</html>

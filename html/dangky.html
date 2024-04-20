@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../js/bootstrap.min.js"></script>
+    <style>
+        [class*=col-]{
+            margin: 0px auto;
+            padding: 0px;
+        }
+
+        .container {}
+
+        .nav-item {
+            margin-left: 30px;
+        }
+
+        .nav-link {
+          font-weight: bold;
+        }
+
+        .card {
+          margin-top: 50px;
+        }
+
+        .footer {
+          background-color: blue;
+        }
+        .about a {
+          text-decoration: none;
+          color: white;
+        }
+        .hotro a {
+          text-decoration: none;
+          color: white;
+        }
+
+        .content {
+            background-color: antiquewhite;
+        }
+
+        .dropdown-toggle::after {
+          display: none;
+        }
+
+        .dropdown-toggle:hover {
+            background-color: rgb(238, 126, 34);
+        }
+
+        #icon_user:hover {
+            background-color: white;
+        }
+
+        .note {
+            color: red;
+        }
+
+
+
+        .container-form .row {  
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row  header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="home.html">
+                    <img src="../img/logo.png" alt="#" style="width: 100%;">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Áo
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="ao.html">Áo polo</a></li>
+                          <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                          <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                          <li><a class="dropdown-item" href="#">Áo chống nắng</a></li>
+                          <li><a class="dropdown-item" href="#">Áo Khoác</a></li>
+                          <li><a class="dropdown-item" href="#">Áo giữ nhiệt</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Quần
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="quan.html">Quần short</a></li>
+                          <li><a class="dropdown-item" href="#">Quần kaki</a></li>
+                          <li><a class="dropdown-item" href="#">Quần jean</a></li>
+                          <li><a class="dropdown-item" href="#">Quần yody</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Túi xách
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="tuisach.html">Túi xách</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tất
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="tat.html">Tất cổ cao</a></li>
+                          <li><a class="dropdown-item" href="#">Tất không cổ</a></li>
+                          <li><a class="dropdown-item" href="#">Tất lưới</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Mắt kính
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="matkinh.html">Kính thường</a></li>
+                          <li><a class="dropdown-item" href="#">Kính màu</a></li>
+                          <li><a class="dropdown-item" href="#">Kính cận</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Thêm
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="gioithieu.html" onclick="return about()">Giới thiệu</a></li>
+                          <li><a class="dropdown-item" href="#">Liên hệ</a></li>
+                          <li><a class="dropdown-item" href="#">Tin tức</a></li>
+                          <li><a class="dropdown-item" href="#">Tin khuyến mãi</a></li>
+                          <li><a class="dropdown-item" href="#">Hàng outlet</a></li>
+                          <li><a class="dropdown-item" href="#">Hệ thống cửa hàng</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <!-- <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit" onclick="return search()">
+                        <img src="../img/search.png" alt="#" style="height: 30px; width: 30px;">
+                      </button>
+                    </form>  -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 pe-5">
+                      <li class="nav-item dropdown" id="icon_user">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../img/icon_user.jpg" alt="Tài khoản">
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+                            <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item" id="icon_cart">
+                          <a class="nav-link dropdown-toggle" href="cart.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../img/icon_cart.png" alt="Giỏ hàng">
+                          </a>
+                      </li>
+                    </ul>
+                  </div> 
+                </div>
+              </nav>
+        </div>
+        <div class="row text-center">
+            <form name="formDK" class="form-control" onreset="return resetForm()">
+                <div class="container-form">
+                    <div class="row welcome">
+                        <h5>Chào mừng bạn đến với YODY</h5>
+                    </div>
+                    <div class="row title">
+                        <h1>ĐĂNG KÝ</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <input type="text" placeholder="Họ và tên" class="form-control" id="txtHT" onblur="return checkHT()">
+                        </div>
+                        <div class="col-4 text-start">
+                            <span class="note" id="noteHT">(*)</span>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <input type="text" placeholder="Số điện thoại" class="form-control" id="txtSDT" onblur="return checkSDT()">
+                        </div>
+                        <div class="col-4 text-start">
+                            <span class="note" id="noteSDT">(*)</span>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <input type="text" placeholder="Email" class="form-control" id="txtEmail" onblur="return checkE()">
+                        </div>
+                        <div class="col-4 text-start">
+                            <span class="note" id="noteEmail">(*)</span>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-6">
+                            <input type="text" placeholder="Mật khẩu" class="form-control" id="txtMK" onblur="return checkMK()">
+                        </div>
+                        <div class="col-4 text-start">
+                            <span class="note" id="noteMK">(*)</span>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-md-2 sm-1">
+                            <button class="form-control bg-success" onclick="signUp()">Đăng ký</button>
+                        </div>
+                        <div class="col-md-1 sm-1"></div>
+                        <div class="col-md-2 sm-1">
+                            <button class="form-control bg-warning" type="reset">Reset</button>
+                        </div>
+                        <div class="col-md-5 sm-1"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row footer text-white px-2 py-2">
+            <div class="col-md-3 sm-1">
+              <p>“Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi suy nghĩ hành động của mình” là sứ mệnh, là triết lý, chiến lược.. luôn cùng YODY tiến bước</p>
+              <a href="https://www.facebook.com/baosupermegaultraultimatevippro" target="_blank"><img src="../img/iconfb2.png" alt="facebook"></a>
+              <a href="#"><img src="../img/iconzalo.png" alt="zalo" target="_blank"></a>
+              <a href="https://github.com/baodang96" target="_blank"><img src="../img/github.png" alt="github"></a>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-md-2 sm-1 about">
+              <div class="row"><h5>Về Yody</h5></div>
+              <div class="row"><a href="#">Giới thiệu</a></div>
+              <div class="row"><a href="#">Liên hệ</a></div>
+              <div class="row"><a href="#">Tuyển dụng</a></div>
+              <div class="row"><a href="#">Tin tức</a></div>
+              <div class="row"><a href="#">Hệ thống cửa hàng</a></div>
+              <div class="row"><a href="#">Hàng outlet</a></div>
+              <div class="row"><a href="#">Tin khuyến mãi</a></div>
+              <div class="row"><a href="#">Đăng ký đối tác</a></div>
+            </div>
+            <div class="col-md-3 sm-1 hotro">
+              <div class="row"><h5>Hỗ trợ khách hàng</h5></div>
+              <div class="row"><a href="#">Hướng dẫn Chọn size</a></div>
+              <div class="row"><a href="#">Chính sách Khách hàng thân thiết</a></div>
+              <div class="row"><a href="#">Chính sách Bảo hành, đổi/trả</a></div>
+              <div class="row"><a href="#">Chính sách Thanh toán, giao nhận</a></div>
+              <div class="row"><a href="#">Chính sách Đồng phục</a></div>
+              <div class="row"><a href="#">Chính sách Bảo mật thông tin khách hàng</a></div>
+              <div class="row"><a href="#">Chính sách Sử dụng Cookies</a></div>
+            </div>
+            <div class="col-md-3 sm-1 hotro">
+              <div class="row"><h5>CÔNG TY CP THỜI TRANG YODY</h5></div>
+              <div class="row"><span>Công ty cổ phần Thời trang YODY</span></div>
+              <div class="row"><span>Mã số thuế: 0801206940</span></div>
+              <div class="row"><span>Địa chỉ: Đường An Định - Phường Việt Hòa -</span></div>
+              <div class="row"><span>Thành phố Hải Dương - Hải Dương</span></div>
+              <div class="row"><a href="https://www.google.com/maps/search/yody">Tìm cửa hàng gần bạn nhất</a></div>
+              <div class="row"><span> Liên hệ đặt hàng: 024 999 86 999.</span></div>
+              <div class="row"><span>Thắc mắc đơn hàng: 024 999 86 999.</span></div>
+              <div class="row"><span>Góp ý khiếu nại: 1800 2086.</span></div>
+              <div class="row"><span> Email: chamsockhachhang@yody.vn</span></div>
+              <div class="row">
+                <div class="col-md-6 sm-1">
+                  <img src="../img/bocongthuong.png" alt="#">
+                </div>
+                <div class="col-md-6 sm-1" s>
+                  <img src="../img/dmca.png" alt="#" style="margin-top: 10px;">
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var rexNULL = "";
+
+        function checkHT(){
+            var rexHT = /[A-Z][a-z]*(\s[A-Z][a-z]*)*/
+            if(rexNULL == document.getElementById('txtHT').value.trim()){
+                noteHT.innerText = "Không được để trống";
+                return false;
+            } else if(rexHT.test(document.getElementById('txtHT').value.trim())==false){
+                noteHT.innerText = "Phải viết hoa chữ cái đầu mỗi từ";
+                return false;
+            } else {
+                noteHT.innerText = "";
+                return true;
+            } 
+        }
+
+        function checkSDT(){
+            var rexSDT = /[0-9]{10}/
+            var sdt = document.getElementById('txtSDT').value.trim();
+            if(rexNULL == sdt){
+                noteSDT.innerText = "Không được để trống";
+                return false;
+            } else if (rexSDT.test(sdt)==false){
+                noteSDT.innerText = "Phải là số và đúng 10 kí tự";
+                return false;
+            } else {
+                noteSDT.innerText = "";
+                return true;
+            }
+        }
+
+        function checkE(){
+            var rexE = /[a-z]+@(gmail|yahoo)\.com(\.vn)?/
+            var email = document.getElementById('txtEmail').value.trim();
+            if(rexNULL == email){
+                noteEmail.innerText = "Không được để trống";
+                return false;
+            } else if (rexE.test(email)==false){
+                noteEmail.innerText = "Phải phù hợp x@(gmail|yahoo).com(.vn)";
+                return false;
+            } else {
+                noteEmail.innerText = "";
+                return true;
+            }
+        }
+
+        function checkMK(){
+            var rexMK = /([A-Za-z0-9]){6,}/
+            var mk = document.getElementById('txtMK').value.trim();
+            if(rexNULL == mk){
+                noteMK.innerText = "Không được để trống";
+                return false;
+            } else if (rexMK.test(mk)==false){
+                noteMK.innerText = "Bao gồm chữ, số và từ 6 kí tự trở lên";
+                return false;
+            } else {
+                noteMK.innerText = "";
+                return true;
+            }
+        }
+
+        function signUp(e){
+            event.preventDefault();
+            if(checkHT() == false || checkSDT() == false || checkE() == false || checkMK() == false){
+                alert("Đăng ký không thành công");
+                return false;
+            } else {
+                var ht = document.getElementById('txtHT').value.trim();
+                var SDT = document.getElementById('txtSDT').value.trim();
+                var email = document.getElementById('txtEmail').value.trim();
+                var mk = document.getElementById('txtMK').value.trim();
+                let user = {
+                  name: ht,
+                  SDT: SDT, 
+                  email: email, 
+                  pwd: mk
+                };
+                let data = JSON.parse(localStorage.getItem(user.SDT));
+                if(data){
+                  alert("Số điện thoại đã được đăng ký");
+                  return false;
+                }
+                localStorage.setItem(SDT, JSON.stringify(user));
+                //localStorage.setItem("USER_INFO", JSON.stringify(user));
+                alert("Đăng ký thành công");
+                window.location.href = "login.html";
+                return true;
+            }
+        }
+
+        function resetForm(){
+            var ht = document.getElementById('txtHT').value.trim();
+            var SDT = document.getElementById('txtSDT').value.trim();
+            var email = document.getElementById('txtEmail').value.trim();
+            var mk = document.getElementById('txtMK').value.trim();
+            ht = "";
+            SDT = "";
+            email = "";
+            mk = "";
+            noteHT.innerText = "(*)";
+            noteSDT.innerText = "(*)";
+            noteEmail.innerText = "(*)";
+            noteMK.innerText = "(*)";
+            
+        }
+    </script>
+</body>
+</html>
